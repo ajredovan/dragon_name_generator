@@ -1,0 +1,35 @@
+.input {
+  padding: 10px;
+  font-size: 20px;
+  border: solid 2px #D3D3D3;
+  border-radius: 3px;
+  width: 100%;
+}
+
+body {
+  background-image: url('../images/dragon.jpg');
+}
+
+.container {
+  width: 400px;
+
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.form-group {
+  margin: 20px;
+}
+
+input {
+  width: 300px;
+}
+
+.btn {
+  margin-left: 20px;
+}
