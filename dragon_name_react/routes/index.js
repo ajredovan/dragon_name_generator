@@ -1,14 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var multer = require('multer');
-var upload = multer({dest: './public/images/uploads'});
+const express = require('express'),
+  router = express.Router()
+  multer = require('multer');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.post('/generate', upload.single('dragonpic'), (req, res, next) => {
+router.post('/generate', (req, res, next) => {
   var firstName = req.body.firstName,
       lastName  = req.body.lastName,
       motherName = req.body.motherName,
@@ -32,9 +31,7 @@ router.post('/generate', upload.single('dragonpic'), (req, res, next) => {
 
   dragonName = capitalize(dragonName.toLowerCase());
 
-  res.render('index', {
-    "dragonName": dragonName
-  });
+  res.json(dragonName);
 });
 
 module.exports = router;
